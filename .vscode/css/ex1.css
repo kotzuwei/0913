@@ -17,3 +17,79 @@ header {
     border: solid #fff 3px;
     padding: 5px 0px 10px 0px;
 }
+
+#menu{
+    width: 674px;
+    background: linear-gradient(#333,#000);
+    margin-left: 3px;
+    float: left;
+}
+#menu ul{
+    list-style: none;
+   padding: 0px;
+   margin-left: 100px;
+}
+#menu ul li{
+    display: inline;
+    
+}
+#menu ul li a{
+    color:#fff;
+    text-decoration: none;
+    padding-top: 0px;
+    height: 30px;
+    width: 80px;
+    float: left;
+    display: block;
+    text-align: center;
+}
+
+#menu a:hover{
+    color: #f00;
+    background: linear-gradient(#000,#666);
+}
+
+#content{
+    width: 680px;
+    background-color: #fff;
+}
+
+
+
+
+#left{
+    float: left;
+    width: 200px;
+    padding-left: 10px;
+}
+#left h3{
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    background: linear-gradient(#ddd,#888,#333,#000);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+#left h4{
+    padding-left: 5px;
+}
+#left p{
+    padding-left: 5px;
+}
+
+
+
+
+#right{
+    float:right;
+    width: 450px;
+}
+
+footer{
+    clear:both;
+    width:680px;
+    background: linear-gradient(#666,#000);
+    color:#fff;
+    text-align: center;
+    padding-top:5px;
+}
