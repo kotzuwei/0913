@@ -8,6 +8,13 @@ var server = express();
 server.use(express.static(__dirname+"/AgencyProject"));
 
 
+//DB
+var DB = require("nedb-promises");
+var Profolio = DB.create(__dirname+"/profolio.db");
+Profolio.insert({modal: "#portfolioModal1", imgSrc:"roundicons.png", heading:"Round Icons", text:"Graphic Design"})
+
+
+
 //web get
 server.get("/:DDDDD", (req, res)=>{
     res.send("早ㄤ");
@@ -24,3 +31,4 @@ server.get("/services", (req, res)=>{
 server.listen(80, ()=>{
     console.log(":DDDDD");
 })
+
