@@ -82,6 +82,7 @@
         font-size: 1.2em;
         color: navy;
     }
+
 </style>
 
 
@@ -94,13 +95,13 @@
             <img src="images/bg.png" id="bg">
             <!-- <img src="images/logo.png"> -->
             <!-- <h2 id="title">Mountains</h2> -->
-            <img src="images/title.png" id="man">
-            <img src="images/kirakira_R.png" id="cloud1">
-            <img src="images/kirakira_L.png" id="cloud2">
-            <img src="images/ripple_L.png" id="m_left">
-            <img src="images/ripple_R.png" id="m_right">
+            <img src="images/title.png" id="title">
+            <img src="images/kirakira_R.png" id="kirakira_R">
+            <img src="images/kirakira_L.png" id="kirakira_R">
             <img src="images/line_R.png" id="line_R">
             <img src="images/line_L.png" id="line_L">
+            <img src="images/ripple_L.png" id="ripple_L">
+            <img src="images/ripple_R.png" id="ripple_R">
             
         </header></br></br></br></br>
 
@@ -227,51 +228,76 @@
     
       
     <script>
-        
-        let mm = gsap.matchMedia()
-        // this user has no preference set, so it's safe to animate!
-        mm.add("(prefers-reduced-motion: no-preference)", (context) => {
-        gsap.from("#line_R", { 
-            rotation: 360, 
-            scale: 1.5,
-            ease: "back.inOut",
-            repeat: -1,
-            yoyo: true,
-            duration: 3,
-        })
-        });
-
-        // this user has specified "reduced motion", so either remove the animations or simplify them down
-        mm.add("(prefers-reduced-motion: reduce)", (context) => {
-        gsap.from("#line_R", { opacity: 0, repeat: -1, duration: 3, ease: "none"})
-        });
-
-
 
         //gsap.registerPlugin(ScrollTrigger)
-        gsap.to("#bg",{
-            scrollTrigger:{
-                trigger: "#title",
-                start: "top 250px", //"top center", "10px 80%"
-                end: "bottom 100px",//"+=200"
-                toggleActions: "restart restart pause pause",//play, pause, resume, reverse, complete, restart, reset, or none.
-                scrub: 1, //1 sec, or  srub:true start到end的時間
-                //horizontal: true,
-                markers: true
-            },
-            scale: 2,
-            duration: 5//no use if scrub:1
-        });
+        // gsap.to("#bg",{
+        //     scrollTrigger:{
+        //         trigger: "#bg",
+        //         start: "top 250px", //"top center", "10px 80%"
+        //         end: "bottom 100px",//"+=200"
+        //         toggleActions: "restart restart pause pause",//play, pause, resume, reverse, complete, restart, reset, or none.
+        //         scrub: 1, //1 sec, or  srub:true start到end的時間
+        //         //horizontal: true,
+        //         markers: false
+        //     },
+        //     scale: 2,
+        //     duration: 5//no use if scrub:1
+        // });
         //toggleActions:
         //第一個參數代表: onEnter - 向下滾動，目標啟動點 與 視窗捲軸開始
         //第二個參數代表: onLeave - 向下滾動，目標結束點 與 視窗捲軸結束
         //第三個參數代表: onEnterBack - 向上滾動，目標結束點 與 視窗捲軸結束
         //第四個參數代表: onLeaveBack - 向上滾動，目標啟動點 與 視窗捲軸開始
+        
+        gsap.fromTo("#title", 
+            { opacity: 0 }, // 初始狀態：完全透明
+            { opacity: 1, duration: 3, ease: "none" } // 結束狀態：完全不透明
+        );
+
+
+        gsap.to("#line_R", {
+            scrollTrigger: {
+                trigger: "#line_L",
+                start: "top center", // 動畫開始時滾動位置
+                end: "bottom center", // 動畫結束時滾動位置
+                scrub: true, // 滾動進度同步動畫
+            },opacity: 0, duration: 3
+            
+        }); 
+        gsap.to("#line_L", {
+            scrollTrigger: {
+                trigger: "#line_L",
+                start: "top center", // 動畫開始時滾動位置
+                end: "bottom center", // 動畫結束時滾動位置
+                scrub: true, // 滾動進度同步動畫
+            },opacity: 0, duration: 3
+            
+        });        
+        // gsap.from("#line_R", { })
+
+
+        gsap.to("#kirakira_R", {
+            opacity: 0, repeat: -1, yoyo: true, duration: 1.5
+        }); 
+        gsap.to("#kirakira_L", {
+            opacity: 0, repeat: -1, yoyo: true, duration: 1.5
+        });
          
-        gsap.to("#m_left",{
+
+        gsap.to("#ripple_L",{
             x: -600,
             scrollTrigger:{
-                trigger: "#title",
+                trigger: "#ripple_L",
+                start: "top 250px", //"top center", "10px 80%"
+                end: "bottom 100px",//"+=200"
+                toggleActions: "restart restart pause pause",//play, pause, resume, reverse, complete, restart, reset, or none.
+                scrub: 1
+            }
+        })
+        gsap.to("#ripple_R",{
+            x: 600,
+            scrollTrigger:{
+                trigger: "#ripple_R",
                 start: "top 250px", //"top center", "10px 80%"
                 end: "bottom 100px",//"+=200"
                 toggleActions: "restart restart pause pause",//play, pause, resume, reverse, complete, restart, reset, or none.
@@ -279,16 +305,11 @@
             }
         })
 
-        gsap.to("#m_right",{
-            x: 600,
-            scrollTrigger:{
-                trigger: "#title",
-                start: "top 250px", //"top center", "10px 80%"
-                end: "bottom 100px",//"+=200"
-                toggleActions: "restart restart pause pause",//play, pause, resume, reverse, complete, restart, reset, or none.
-                scrub: 1
-            }
-        })
+
+        //---------------Hello World!✨---------------//
+        gsap.to('h2', {
+            opacity: 0, repeat: -1, duration: 5
+        });
 
     </script>
 
