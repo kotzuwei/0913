@@ -47,27 +47,24 @@ header img {
 .content {
     position: relative;
     padding: 300px;
+    color:#273384;
 }
 
 
 .content_Hello {
-    padding-bottom: 300px
+    padding-bottom: 500px
 }
-.content_Hello h2 {
+.content h2 {
     font-size: 3.5em;
     margin-bottom: 10px;
-    color: navy;
 }
-.content_Hello p {
+.content p {
     font-size: 1.2em;
-    color: navy;
+}
+.Carousel {
+    padding-bottom: 300px;
 }
 
-.content_work h2 {
-    font-size: 3.5em;
-    margin-bottom: 10px;
-    color: navy;
-}
 
 
 
