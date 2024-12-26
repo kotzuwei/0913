@@ -42,7 +42,7 @@ const ProjectCarousel = {
                 {
                     id: 'carousel-magic',
                     title: '魔法三原色! Magic Primary Colors!',
-                    description: '這是一個關於顏色的魔法世界...',
+                    description: '《魔法三原色!》為一款聖經故事改編的文字冒險類遊戲，玩家角色進入魔法學園就讀，遇見了以光的三原色為設定的女同學們與她們組隊驅魔尋物，並在最後拯救或是讓世界毀滅。',
                     slides: [
                         { image: 'images/Magic Primary Colors!1.png', alt: 'MagicPrimaryColors1' },
                         { image: 'images/Magic Primary Colors!2.png', alt: 'MagicPrimaryColors2' },
@@ -54,13 +54,25 @@ const ProjectCarousel = {
                 {
                     id: 'carousel-meerkats',
                     title: '獴混過關(製作中)',
-                    description: '一個關於狐獴的冒險遊戲...',
+                    description: '將遊戲與互動裝置技術結合，開發出此款可用自製搖桿遊玩的遊戲。狐獴需不斷往上跳直到終點，同時躲避敵人及小心從岩石上墜落。',
                     slides: [
                         { image: 'images/Get away with Meerkats1.png', alt: 'Get away with Meerkats1' },
                         { image: 'images/Get away with Meerkats2.png', alt: 'Get away with Meerkats2' },
                         { image: 'images/Get away with Meerkats3.png', alt: 'Get away with Meerkats3' },
                         { image: 'images/Get away with Meerkats4.png', alt: 'Get away with Meerkats4' },
                         { image: 'images/Get away with Meerkats5.png', alt: 'Get away with Meerkats5' },
+                    ]
+                },
+                {
+                    id: 'carousel-candy',
+                    title: 'Candy Duck',
+                    description: '結合手語動畫的寓教於樂小遊戲，玩家須將糖果擊落，讓鴨子吃到，在限時內把糖果全部吃掉即可勝利。',
+                    slides: [
+                        { image: 'images/Candy Duck1.png', alt: 'Candy Duck1' },
+                        { image: 'images/Candy Duck2.png', alt: 'Candy Duck2' },
+                        { image: 'images/Candy Duck3.png', alt: 'Candy Duck3' },
+                        { image: 'images/Candy Duck4.png', alt: 'Candy Duck4' },
+                        { image: 'images/Candy Duck5.png', alt: 'Candy Duck5' },
                     ]
                 }
             ]

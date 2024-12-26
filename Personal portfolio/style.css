@@ -89,10 +89,24 @@ footer {
     padding: 50px 500px;
     background-color: #afcfe9;
     color: #fff;
+    text-align: center;
 }
 
-.footer-list{
-    padding-right: 50px;
+footer .row {
+    display: flex;
+    align-items: center; /* 垂直置中 */
+    justify-content: space-between; /* 左右極限分散 */
+}
+  
+  .footer-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* 增加連結間距 */
 }
 
-
+.preview-link {
+    text-decoration: none; /* 移除底線 */
+    color: #ffffff; /* 文字顏色 */
+    font-size: 1rem; /* 字體大小 */
+}
