@@ -35,12 +35,21 @@ header img {
     pointer-events: none;
 }
 
+
+
 #title {
     position: relative;
     color: #fff;
     font-size: 10em;
 }
 
+
+#kirakira_R{
+    z-index: 2;
+}
+#kirakira_L{
+    z-index: 2;
+}
 
 
 /*--------------------------content--------------------------*/
@@ -72,5 +81,18 @@ header img {
 
 
 
+
+
+/*--------------------------footer--------------------------*/
+footer {
+    display: flex;
+    padding: 50px 500px;
+    background-color: #afcfe9;
+    color: #fff;
+}
+
+.footer-list{
+    padding-right: 50px;
+}
 
 

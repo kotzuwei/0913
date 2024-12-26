@@ -2,7 +2,7 @@ const ProjectCarousel = {
     template: `
         <div>
             <div v-for="(carousel, index) in carousels" :key="index" class="carousel-container">
-                <h3 class="carousel-title">➤ {{ carousel.title }}</h3>
+                <h3 class="carousel-title" >➤ {{ carousel.title }}</h3>
                 <p>{{ carousel.description }}</p>
                 <div class="Carousel">
                     <div :id="carousel.id" class="carousel slide" data-bs-ride="carousel">
@@ -58,7 +58,9 @@ const ProjectCarousel = {
                     slides: [
                         { image: 'images/Get away with Meerkats1.png', alt: 'Get away with Meerkats1' },
                         { image: 'images/Get away with Meerkats2.png', alt: 'Get away with Meerkats2' },
-                        { image: 'images/Get away with Meerkats3.png', alt: 'Get away with Meerkats3' }
+                        { image: 'images/Get away with Meerkats3.png', alt: 'Get away with Meerkats3' },
+                        { image: 'images/Get away with Meerkats4.png', alt: 'Get away with Meerkats4' },
+                        { image: 'images/Get away with Meerkats5.png', alt: 'Get away with Meerkats5' },
                     ]
                 }
             ]
@@ -93,13 +95,13 @@ const ProjectCarousel = {
             opacity: 0,
             repeat: -1,
             yoyo: true,
-            duration: 1.5,
+            duration: 1,
           });
           gsap.to("#kirakira_L", {
             opacity: 0,
             repeat: -1,
             yoyo: true,
-            duration: 1.5,
+            duration: 1,
           });
     
           // 4. Hello World! 閃爍動畫
@@ -133,7 +135,7 @@ const ProjectCarousel = {
           // 6. 滾動觸發淡出動畫
           gsap.to("#line_R", {
             scrollTrigger: {
-              trigger: "#line_L",
+              trigger: "#line_R",
               start: "top center",
               end: "bottom center",
               scrub: true,
